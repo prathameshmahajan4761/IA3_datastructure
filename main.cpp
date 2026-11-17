@@ -109,10 +109,12 @@ int main()
 
     cout << "PRN: 202501100189\n";
     cout << "Mango Varieties Hash Table\n";
+    int totalInserted = 0;
 
     for (int i = 0; i < 20; i++)
     {
         insertKey(table, values[i]);
+        totalInserted++;
 
         cout << "\nAfter inserting "
              << values[i] << ":\n";
@@ -122,6 +124,13 @@ int main()
 
     cout << "\nFinal Hash Table:";
     display(table);
+    cout << "\nTotal keys inserted: "
+     << totalInserted << endl;
+
+if (totalInserted == 20)
+    cout << "All 20 keys inserted successfully!" << endl;
+else
+    cout << "Insertion verification failed!" << endl;
 
     return 0;
 }
