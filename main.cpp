@@ -64,6 +64,8 @@ void display(vector<list<int>>& table)
                 cout << key << " -> ";
             }
             cout << "NULL";
+            cout << " | Total nodes: "
+     << table[i].size();
         }
 
         cout << endl;
