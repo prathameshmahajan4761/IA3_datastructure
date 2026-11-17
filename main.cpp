@@ -31,6 +31,17 @@ void insertKey(vector<list<int>>& table, int key)
 {
     int index = midSquareHash(key);
 
+    if (!table[index].empty())
+    {
+        cout << "Collision detected at index "
+             << index << endl;
+    }
+    else
+    {
+        cout << "No collision at index "
+             << index << endl;
+    }
+
     table[index].push_back(key);
 }
 
