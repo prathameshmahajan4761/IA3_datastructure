@@ -58,7 +58,19 @@ void display(vector<list<int>>& table)
         cout << endl;
     }
 }
+void testHashFunction()
+{
+    int keys[] = {89, 2, 15};
 
+    cout << "\nHash Function Testing\n";
+
+    for (int i = 0; i < 3; i++)
+    {
+        cout << "Key: " << keys[i]
+             << " Hash Index: "
+             << midSquareHash(keys[i]) << endl;
+    }
+}
 int main()
 {
     int values[20] = {
@@ -69,6 +81,7 @@ int main()
     };
 
     vector<list<int>> table(SIZE);
+    testHashFunction();
 
     cout << "PRN: 202501100189\n";
     cout << "Mango Varieties Hash Table\n";
