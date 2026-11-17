@@ -71,6 +71,16 @@ void testHashFunction()
              << midSquareHash(keys[i]) << endl;
     }
 }
+void displayTableStructure()
+{
+    cout << "\nHash Table Structure\n";
+    cout << "Total Buckets: " << SIZE << endl;
+
+    for (int i = 0; i < SIZE; i++)
+    {
+        cout << "Bucket " << i << endl;
+    }
+}
 int main()
 {
     int values[20] = {
@@ -82,6 +92,7 @@ int main()
 
     vector<list<int>> table(SIZE);
     testHashFunction();
+    displayTableStructure();
 
     cout << "PRN: 202501100189\n";
     cout << "Mango Varieties Hash Table\n";
